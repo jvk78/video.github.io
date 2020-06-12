@@ -1,7 +1,5 @@
-const click = document.getElementById('title')
-click.addEventListener('click', function() {
-  click.style.color = 'red';
-})
+const click = document.getElementById('title');
+
 
 var tag = document.createElement('script');
 
@@ -25,6 +23,10 @@ var tag = document.createElement('script');
   }
 
   // 4. The API will call this function when the video player is ready.
-  function onPlayerReady(event) {
+function onPlayerReady(event) {
+  
+click.addEventListener('click', function() {
+  click.style.color = 'red';
     event.target.playVideo();
-  }
+  } ) 
+}
