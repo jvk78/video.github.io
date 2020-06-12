@@ -1,3 +1,8 @@
+const click = document.getElementById('title')
+click.addEventListener('click', function() {
+  click.style.color = 'red';
+})
+
 var tag = document.createElement('script');
 
   tag.src = "https://www.youtube.com/iframe_api";

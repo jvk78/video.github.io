@@ -61,6 +61,7 @@ a {
   padding: 5px;
   background-color: #f3ffb3;
   color: #00ff58;
+  cursor: pointer;
 }
 .video {
   position: relative;
