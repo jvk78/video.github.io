@@ -1,0 +1,57 @@
+// main: ../style.less
+.map__popup__bgr{
+  opacity: 0;
+//  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  transform: scale(0);
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 100;
+  transition: .5s;
+  transform-origin: center;
+}
+.map {
+  width: 95%;
+  height: 95%;
+}
+.cls__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 10px 0 0;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border:5px solid #3d3d3d;
+  cursor:pointer;
+  z-index: 10000;
+  &::after, &::before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: #7a7a7a;
+    transform: rotate(-45deg);
+    transition: .3s;
+  }
+  &::after {
+    transform: rotate(45deg)
+  }
+  &:hover {
+    &::after, &::before{
+    background-color: #3d3d3d;
+    }
+  }
+}

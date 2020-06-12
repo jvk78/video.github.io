@@ -93,3 +93,133 @@ iframe,
   background: url(../img/vieo_scr_.jpg) center no-repeat;
   background-size: cover;
 }
+/* Contacts */
+.contacts__wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap: 10px;
+  grid-row-gap: 25px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0px 20px;
+}
+.contacts__items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+}
+.left {
+  align-items: center;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+.contacts__items span {
+  font-size: 20rpx;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.conacts__logo {
+  width: 40%;
+  margin-bottom: 16px;
+}
+.phone__mail,
+.phone__mail a {
+  margin: 10px 5px 0;
+  font-weight: 400;
+}
+.map__scr {
+  cursor: pointer;
+  background: url('../img/map_prev.jpg') center no-repeat;
+  background-size: cover;
+}
+.open__map-text {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fabf18;
+}
+.map__popup__bgr {
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  transform: scale(0);
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.map {
+  width: 95%;
+  height: 95%;
+}
+.cls__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 10px 0 0;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid #3d3d3d;
+  cursor: pointer;
+  z-index: 10000;
+}
+.cls__btn::after,
+.cls__btn::before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 2px;
+  background-color: #7a7a7a;
+  transform: rotate(-45deg);
+  transition: 0.3s;
+}
+.cls__btn::after {
+  transform: rotate(45deg);
+}
+.cls__btn:hover::after,
+.cls__btn:hover::before {
+  background-color: #3d3d3d;
+}
+@media screen and (max-width: 1000px) {
+  .video__wrapper {
+    width: 80%;
+    height: 43vw;
+    background-color: #acffa1;
+  }
+}
+@media screen and (max-width: 736px) {
+  .contacts__map_scr {
+    display: none;
+  }
+  .video__wrapper {
+    width: 100%;
+    height: 55vw;
+    background-color: #acffa1;
+  }
+  .contacts__wrapper,
+  .open__map-text {
+    display: block;
+  }
+  h1 {
+    margin: 10px auto;
+  }
+}
