@@ -1,4 +1,4 @@
-const click = document.getElementById('title');
+const click = document.getElementById('play__video');
 
 
 var tag = document.createElement('script');
@@ -7,8 +7,6 @@ var tag = document.createElement('script');
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  // 3. This function creates an <iframe> (and YouTube player)
-  //    after the API code downloads.
   var player;
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -22,11 +20,10 @@ var tag = document.createElement('script');
     });
   }
 
-  // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   
 click.addEventListener('click', function() {
-  click.style.color = 'red';
+  click.style.opacity = '0';
     event.target.playVideo();
   } ) 
 }

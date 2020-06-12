@@ -6,18 +6,32 @@
   color: #0a00ff;
   cursor: pointer;
 }
-.video {
+.video__wrapper {
   position: relative;
   display: block;
-  width: 100%;
+  margin: auto;
+  width: 700px;
   height: 400px;
+  background-color: #868d34;
+}
+.video {
+  display: block;
   background-color: #fffac1;
   margin: auto;
   text-align: center;
+  transition: .5s ease-in-out;
+  
 }
-iframe {
+iframe, .video, .video__scr{
   width: 100%;
   height: 100%;
-//  position: absolute;
-  object-fit: cover;
+}
+.video__scr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  background: url(../img/vieo_scr_.jpg) center no-repeat;
+  background-size: cover;
 }
