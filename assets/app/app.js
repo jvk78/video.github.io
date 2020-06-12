@@ -1,4 +1,4 @@
-const click = document.getElementById('play__video');
+const playVideo = document.getElementById('play__video');
 
 
 var tag = document.createElement('script');
@@ -22,8 +22,9 @@ var tag = document.createElement('script');
 
 function onPlayerReady(event) {
   
-click.addEventListener('click', function() {
-  click.style.opacity = '0';
-    event.target.playVideo();
+playVideo.addEventListener('click', function() {
+  playVideo.style.opacity = '0';
+      setTimeout(function(){play.style.display = 'none'}, 500);
+      event.target.playVideo();
   } ) 
 }
