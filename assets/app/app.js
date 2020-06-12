@@ -24,7 +24,7 @@ function onPlayerReady(event) {
   
 playVideo.addEventListener('click', function() {
   playVideo.style.opacity = '0';
-      setTimeout(function(){play.style.display = 'none'}, 500);
+      setTimeout(function(){playVideo.style.display = 'none'}, 500);
       event.target.playVideo();
   } ) 
 }
